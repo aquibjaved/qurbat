@@ -1,7 +1,7 @@
 import torch
 import torchvision.models as models
 from PIL import Image
-from utils import compose_image
+from qurbat.image_nearness.utils import compose_image
 import argparse
 
 
