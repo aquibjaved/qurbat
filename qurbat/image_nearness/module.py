@@ -1,7 +1,7 @@
 import torch
 import torchvision.models as models
 from PIL import Image
-from qurbat.image_nearness.utils import compose_image
+from qurbat.image_nearness.utils import compose_image, get_cosine_similarity
 import argparse
 
 
@@ -35,6 +35,7 @@ if __name__ == "__main__":
     args.add_argument("--img1", help="provide image one")
     arguments = args.parse_args()
 
-    print(get_features(arguments.img1))
+    v1 = get_features(arguments.img1)
+    print(get_cosine_similarity(vector_1=v1, vector_2=v1))
 
 

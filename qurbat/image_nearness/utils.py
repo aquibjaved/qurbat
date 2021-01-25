@@ -1,5 +1,6 @@
 from torchvision import transforms
-from PIL import Image
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def compose_image(size_height: int, size_width: int):
@@ -18,3 +19,6 @@ def compose_image(size_height: int, size_width: int):
     return preprocess
 
 
+def get_cosine_similarity(vector_1: np.ndarray, vector_2: np.ndarray):
+
+    return cosine_similarity(vector_1, vector_2)
